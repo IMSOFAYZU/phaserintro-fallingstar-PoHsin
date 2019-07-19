@@ -44,8 +44,10 @@
                 star.setBounceX(1.0);
                 star.setBounceY(1.0);
             }
-            this.physics.add.collider(platforms,stars);
-            this.physics.add.collider(stars,stars);
+            this.physics.add.collider(platforms,stars);  //碰撞
+            this.physics.add.collider(stars,stars);      //碰撞
+
+            platforms.create(400,568,'ground').setScale(2).refreshBody();  //地板
 
         }
         function update(){
